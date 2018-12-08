@@ -1,3 +1,29 @@
-.list-group-item {
-  line-height: 2.5;
+.title {
+  background-image: url(/images/football-stadium-200986.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10em 0;
+  color: #FFF;
 }
+
+.fans {
+  background-image: url(/images/fans-view-1846039_1920.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10em 0;
+  color: #FFF;
+}
+
+.about {
+  text-align: center;
+  background-color: #62cbfc;
+}
+
+.locker {
+  background-image: url(/images/loocker-pic.jpg);
+  background-size: cover;
+  background-position: bottom;
+  padding: 10em 0;
+  color: #FFF;
+}
+/*# sourceMappingURL=styles.css.map */
