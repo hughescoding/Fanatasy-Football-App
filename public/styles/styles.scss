@@ -1,0 +1,41 @@
+$images: (
+    top: url(/images/football-stadium-200986.jpg),
+    middle: url(/images/fans-view-1846039_1920.jpg),
+    bottom: url(/images/loocker-pic.jpg)
+
+);
+
+@function parallaxImage($img-pos) {
+    @return map-get($images, $img-pos)
+};
+
+.title {
+    background-image: parallaxImage(top);
+    background-size: cover;
+    background-position: center;
+    padding: 10em 0;
+    color: #FFF
+
+}
+
+.fans {
+    background-image: parallaxImage(middle);
+    background-size: cover;
+    background-position: center;
+    padding: 10em 0;
+    color: #FFF
+}
+
+.about {
+    text-align: center;
+    background-color: rgb(98, 203, 252);
+}
+
+.locker {
+    background-image: parallaxImage(bottom);
+    background-size: cover;
+    background-position: bottom;
+    padding: 10em 0;
+    color: #FFF
+
+}
