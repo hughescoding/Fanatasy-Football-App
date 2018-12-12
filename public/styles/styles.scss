@@ -2,8 +2,10 @@ $images: (
     top: url(/images/football-stadium-200986.jpg),
     middle: url(/images/fans-view-1846039_1920.jpg),
     bottom: url(/images/loocker-pic.jpg)
+    starters: url(../images/crossword.png),
+    activePlayers: url(../images/nice_snow.png
 
-);
+));
 
 $padding: (
     parallax-top: 300px 0,
@@ -18,6 +20,10 @@ $padding: (
 @function parallaxImage($img-pos) {
     @return map-get($images, $img-pos)
 };
+
+$jumbotron: (
+    color: #FFF
+);
 
 .title {
     background-image: parallaxImage(top);
