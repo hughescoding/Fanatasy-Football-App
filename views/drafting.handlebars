@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../public/styles/styles.css">
+    <title>Drafting page</title>
+
+</head>
+
+<div class="jumbotron jumbotron-billboard">
+    <div class="img"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Drafting</h2>
+                <p>
+                    First time or returning player, we have you covered.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="activePlayers">
+    <div class="availablePlayers">
+        <center>
+            <h4>Available Players</h4>
+        </center>
+        <br>
+        <div id="searchform">
+            <label class="search">
+                <input id="idSearchBox" class="ui-autocomplete-input DefaultMessage" value="Player Search" msg="Player Search"
+                    autocomplete="off">
+            </label>
+            <span class="DropDown">
+                <select id="cheatSheetOption" ng-model="queueFilter" ng-change="refillQueue()" class="ng-pristine ng-valid ng-touched">
+                    <option value="TopEach">Top player from each position</option>
+                    <option value="Suggestions" selected="selected">Suggested players to consider</option>
+                    <option ng-repeat="rankingsArray" value="nfl_Overall">Overall Rankings</option>
+                    <option ng-repeat="rankingsArray" value="nfl_QB">Quarterback (QB)</option>
+                    <option ng-repeat="rankingsArray" value="nfl_RB">Running Back (RB)</option>
+                    <option ng-repeat="rankingsArray" value="nfl_WR">Wide Receiver (WR)</option>
+                    <option ng-repeat="rankingsArray" value="nfl_TE">Tight End (TE)</option>
+                    <option ng-repeat="rankingsArray" value="nfl_K">Kicker (K)</option>
+                    <option ng-repeat="rankingsArray" value="nfl_DEF">Defense (DEF)</option>
+                </select>
+                <br>
+                <br>
+                <span class="players">
+                    <button type="button" class="btn btn-light">Players name (action to card) </button>
+                    <span class="add">
+                        <button type="button" class="btn btn-light">Add</button>
+                        <span class="drafted">
+                            <button type="button" class="btn btn-light">Drafted</button>
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </div>
+    </div>
+</section>
+</div>
+
+<section class="userTeam">
+    <div class="starters">
+        <center>
+            <h4>Users Team</h4>
+        </center>
+        <ul id="menu">
+            <li>Position</li>
+            <li>Draft Pos</li>
+            <li>Ranking</li>
+        </ul>
+        <br>
+        <button type="button" class="btn btn-light">Players name (action to card) </button>
+
+
+    </div>
+</section>
+
+
+<br>
+<div class="text-center footer">
+    <div class="col-lg-12">
+        <div class="container">
+            Copyright &copy; <span class="tm-current-year">2018</span> Gridiron Kings
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
