@@ -31,15 +31,16 @@ CREATE TABLE standardPlayers
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE users
-(
-	id int NOT NULL AUTO_INCREMENT,
-    username text NOT NULL,
-    user_password text NOT NULL,
-    email varchar(255) NOT NULL,
-    fantasy_team varchar(255),
-	PRIMARY KEY (id)
-);
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `user_password` text NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `fantasy_team` varchar(255) DEFAULT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 CREATE TABLE teams
 (

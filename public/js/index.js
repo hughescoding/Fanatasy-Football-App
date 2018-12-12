@@ -3,7 +3,10 @@ var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
-
+var $signinUsername = $("#signin-username");
+var $signinPassword = $("#signin-password");
+var $signinEmail = $("#signin-email");
+var $signinTeam = $("#signin-team");
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
@@ -26,6 +29,12 @@ var API = {
     return $.ajax({
       url: "api/examples/" + id,
       type: "DELETE"
+    });
+  },
+  createUser: function() {
+    return $.ajax({
+      url: "api/users",
+      type: "POST"
     });
   }
 };
@@ -94,6 +103,39 @@ var handleDeleteBtnClick = function() {
   });
 };
 
+// var sendUserData = function () {
+
+// }
+
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+// modals on the index.handlebars
+// login modal
+$('#login-modal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+// sign up modal
+$('#signup-modal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+$(document).on('click', '#signup-modal-btn', function (event) {
+  event.preventDefault();
+  console.log("clicked")
+  var users = {
+    username: $signinUsername.val().trim(),
+  
+    user_password: $signinPassword.val().trim(),
+   
+    email: $signinEmail.val().trim(), 
+    
+    fantasy_team: $signinTeam.val().trim() 
+
+
+  }
+  $.post("/api/users", users);
+   
+});

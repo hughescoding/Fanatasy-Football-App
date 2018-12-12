@@ -8,6 +8,16 @@ $images: (
 );
 
 
+$padding: (
+    parallax-top: 300px 0,
+    parallax-middle: 500px 0,
+    parallax-bottom: 450px 0,
+);
+
+@function Ppadding($padding-parallax) {
+    @return map-get($padding, $padding-parallax)
+};
+
 @function parallaxImage($img-pos) {
     @return map-get($images, $img-pos)
 };
@@ -20,7 +30,7 @@ $jumbotron: (
     background-image: parallaxImage(top);
     background-size: cover;
     background-position: center;
-    padding: 10em 0;
+    padding: Ppadding(parallax-top);
     color: #FFF
 
 }
@@ -29,7 +39,7 @@ $jumbotron: (
     background-image: parallaxImage(middle);
     background-size: cover;
     background-position: center;
-    padding: 10em 0;
+    padding: Ppadding(parallax-middle);
     color: #FFF
 }
 
@@ -42,7 +52,7 @@ $jumbotron: (
     background-image: parallaxImage(bottom);
     background-size: cover;
     background-position: bottom;
-    padding: 10em 0;
+    padding: Ppadding(parallax-bottom);
     color: #FFF
 
 }

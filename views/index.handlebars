@@ -24,8 +24,8 @@
       <div class="card-body">
         <h5 class="card-title">Welcome to the FFC!</h5>
         <p class="card-text">Log-in to view your Locker Room, or Sign Up to get started.</p>
-        <a href="#" class="btn btn-primary">Log In</a>
-        <a href="#" class="btn btn-primary">Sign Up</a>
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">Log In</a>
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#signup-modal">Sign Up</a>
       </div>
       <div class="card-footer text-muted">
         Boom Baby!!
@@ -45,6 +45,92 @@
   </div>
 </section>
 
+<!-- login Modal -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login to your Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+          <input type="submit" name="login" class="login loginmodal-submit" id="login-modal-btn" value="Login">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- signup modal --}}
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign up for an FFC Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="signup-modal">
+        <form action="POST">
+          <p>Create a Username</p>
+          <input type="text" id="signin-username"class="float-right" name="user" placeholder="Username">
+          <p>Create a Password</p>
+          <input type="password" id="signin-password" class="float-right" name="pass" placeholder="Password">
+          <p>Enter Email</p>
+          <input type="email" id="signin-email" class="float-right" name="email" placeholder="Email">
+          <p>Create Team Name</p>
+          <input type="text" id="signin-team" class="float-right" name="team-name" placeholder="Team Name">
+          <input type="submit" name="login" class="signup signUpModal-submit" data-toggle="modal" data-target="#signup-modal"
+            id="signup-modal-btn" value="Create">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="setup-modal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Set up your League and Team Settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="POST">
+          <p>What type of league are you drafting in?</p>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="radio" aria-label="Radio button for following text input">
+              </div>
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with radio button">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
