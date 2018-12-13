@@ -1,12 +1,11 @@
 $images: (
     top: url(/images/football-stadium-200986.jpg),
     middle: url(/images/fans-view-1846039_1920.jpg),
-    bottom: url(/images/loocker-pic.jpg)
+    bottom: url(/images/loocker-pic.jpg),
     starters: url(../images/crossword.png),
-    activePlayers: url(../images/nice_snow.png
+    activePlayers: url(../images/nice_snow.png)
 
 );
-
 
 $padding: (
     parallax-top: 300px 0,
@@ -48,6 +47,40 @@ $jumbotron: (
     background-color: rgb(98, 203, 252);
 }
 
+  
+.locker {
+    background-image: url(/images/loocker-pic.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding: 450px 0;
+    color: #FFF;
+}
+  
+.availablePlayers {
+    background-image: url(../images/nice_snow.png);
+    // width: 40%;
+    // float: left;
+    // height: 700px;
+    // margin: 50px;
+}
+  
+.starters {
+    background-image: url(../images/nice_snow.png);
+    width: 40%;
+    float: left;
+    height: 700px;
+    margin: 50px;
+  
+}
+  
+.bench {
+    background-image: url(../images/nice_snow.png);
+    width: 40%;
+    float: left;
+    height: 250px;
+    margin: 50px;
+}
+
 .locker {
     background-image: parallaxImage(bottom);
     background-size: cover;
@@ -56,3 +89,87 @@ $jumbotron: (
     color: #FFF
 
 }
+
+#menu {
+    position: relative;
+    left: 190px;
+    display: inline-block;
+  
+}
+  
+#menu li {
+    font-weight: bold;
+    display: inline;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+  
+#benchMenu {
+    position: relative;
+    left: 90px;
+    display: inline-block;
+}
+  
+#benchMenu li {
+    font-weight: bold;
+    display: inline;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+  
+.footer{
+    background-image: url();
+    background-size: cover;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+  
+.jumbotron-billboard .img {
+    margin-bottom: 0px;
+    color: white;
+    background: #000 url("../images/nfl_logo.jpeg") top center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    border-bottom:2.5px solid red;
+}
+.jumbotron h2 {margin-top:0;}
+
+.jumbotron {
+  position:relative;
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+.jumbotron .container {
+  position:relative;
+  z-index:2;
+}
+  
+@media screen and (max-width: 768px) {
+
+ .jumbotron {
+    padding-top:20px;
+    padding-bottom:20px;
+ }
+}
+  
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+  
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
