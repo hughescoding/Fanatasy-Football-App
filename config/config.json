@@ -2,10 +2,6 @@
   "development": {
     "username": "root",
     "password": "root",
-<<<<<<< HEAD
-=======
-
->>>>>>> 6d5fbfcf1b59dbbe8b09e33ed2898d9a141e85ca
     "database": "gridiron_db",
     "host": "localhost",
     "dialect": "mysql"
