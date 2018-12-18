@@ -1,49 +1,104 @@
-<section class="title parallax">
-  <div class="container">
-    <h1>Let's get this working</h1>
-  </div>
-</section>
+<!-- Materialize Header 
+<div class="navbar-fixed">
+  <nav class="#fdd835 yellow darken-1">
+    <div class="nav-wrapper">
 
-<section class="about">
-  <div class="container about parallax">
-    <h2>Welcome to your Fantasy Football Companion!</h2>
-    <h4>Tired of getting crush in your weekly games? <br>Tired of seeing your friends smirking faces as they pumble
-      your "would-be" team into the ground? <br> Well look no further than the FFC Baby <br>We'll get you that
-      Superbowl, that payout, and most importantly, that sweet, sweet, respect!</h4>
-  </div>
-</section>
+      <div><img src="images/sm_helmet.png" style="height: 64px; margin-left: 10px;"></div>
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li></li>
+    <li></li>
+    <li></li>
 
-<section class="fans parallax"></section>
+  </ul>
+</div> -->
 
-<section class="Start">
-  <div class="container-fluid">
-    <div class="card text-center">
-      <div class="card-header">
-        Let's get you on your way!
+
+<!-- Materialize Parallax Scroll Feature -->
+<div class="parallax-text, turfpaint1">
+</div>
+<div class="parallax-container">
+  <div class="parallax, logo1"></div>
+</div>
+<div class="parallax-text, turfpaint">
+  
+</div>
+<div class="parallax-container">
+  <div class="parallax, turf">
+    <div class="row promo-row">
+      <div class="col s3  offset-s2">
+        <!-- Promo Content 1 goes here -->
+        <i class="large material-icons yellow accent-4">view_headline</i>
+        <p class="flow-text promotext">Customize your roster
+          <br> Build your team
+          <br> Watch players</p>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">Welcome to the FFC!</h5>
-        <p class="card-text">Log-in to view your Locker Room, or Sign Up to get started.</p>
-        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">Log In</a>
-        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#signup-modal">Sign Up</a>
+      <div class="col s3">
+        <!-- Promo Content 2 goes here -->
+        <i class="large material-icons yellow accent-4">trending_up</i>
+        <p class="flow-text promotext">Team and player news<br>Stats</p>
       </div>
-      <div class="card-footer text-muted">
-        Boom Baby!!
+      <div class="col s3">
+        <!-- Promo Content 3 goes here -->
+        <i class="large material-icons yellow accent-4">people</i>
+        <p class="flow-text promotext">Build your roster View detailed stats, monitor players</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="parallax-text, turfpaint">
+  
+</div>
+<div class="parallax-container">
+  <div class="parallax, turf">
+    <div class="row">
+      <div class="col s6 offset-s3">
+        <div class="card yellow darken-1, cardreg">
+          <div class="card-content white-text">
+            <span class="card-title promo-text">Join Gridiron Kings</span>
+            <p class="promo-text">Tired of getting crushed in your weekly games? 
+              <br>
+              It's time to Rule your League and play like a KING! 
+              <br>
+              Win the Title, command Repect, take the Money
+              <br>
+              Join Gridiron Kings and begin your conquest
+              <br>
+              <a class="waves-effect waves-green btn-flat btn-large">Register </a><a class="waves-effect waves-green btn-flat btn-large"> Member Login</a>
+              </p>
+              
+          </div>
+          <!-- <div class="card-action">
+            <a href="#">Register</a>| 
+            <a href="#"> Member Login</a>
+          </div> -->
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="locker parallax"></section>
-
-<section class="about">
-  <div class="container about parallax">
-    <h2>Welcome to your Fantasy Football Companion!</h2>
-    <h4>Tired of getting crush in your weekly games? <br>Tired of seeing your friends smirking faces as they pumble
-      your "would-be" team into the ground? <br> Well look no further than the FFC Baby <br>We'll get you that
-      Superbowl, that payout, and most importantly, that sweet, sweet, respect!</h4>
+<!-- Materialize Footer -->
+<nav class="#000000 black">
+  <div class="nav-wrapper">
+    <p class="copyright"> ©  Copyright 2018  <a href="/drafting">draft</a><a href="/locker">Locker Room</a></p>
+    <ul class="left hide-on-med-and-down">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
-</section>
+</nav>
+
 
 <!-- login Modal -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,7 +137,7 @@
       <div class="modal-body" id="signup-modal">
         <form action="POST">
           <p>Create a Username</p>
-          <input type="text" id="signin-username"class="float-right" name="user" placeholder="Username">
+          <input type="text" id="signin-username" class="float-right" name="user" placeholder="Username">
           <p>Create a Password</p>
           <input type="password" id="signin-password" class="float-right" name="pass" placeholder="Password">
           <p>Enter Email</p>
