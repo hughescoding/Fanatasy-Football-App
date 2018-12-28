@@ -17,11 +17,13 @@ function createPlayerRow(playerData) {
     newTr.append("<td> " + playerData.draft_avg + "</td>");
     newTr.append("<td> " + playerData.bye_week + "</td>");
     var draftButton = $("<a>");
-    draftButton.addClass("btn btn-success btn-sm draft-player-btn");
-    draftButton.text("D");
+    draftButton.addClass("waves-effect waves-light green btn");
+    draftButton.addClass("material-icons right")
+    draftButton.html("<i class='small material-icons'>check_circle</i>");
     var draftedButton = $("<a>");
-    draftedButton.addClass("btn btn-danger btn-sm remove-player-btn");
-    draftButton.text("AD");
+    draftedButton.addClass("waves-effect waves-light red btn");
+    draftedButton.addClass("material-icons right")
+    draftedButton.html("<i class='small material-icons'>cancel</i>");
     newTr.append(draftButton, draftedButton);
     
     // newTr.append("<td><a href='/blog?author_id=" + authorData.id + "'>Go to Posts</a></td>");
