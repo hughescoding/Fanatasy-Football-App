@@ -29,9 +29,6 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.BOOLEAN,
           default: false,
       },
-      user_id: {
-          type: DataTypes.INTEGER,
-      },
       timestamps: {
         type: DataTypes.BOOLEAN,
         default: false,
@@ -40,5 +37,14 @@ module.exports = function(sequelize, DataTypes) {
       
   
     });
+    // PprPlayers.associate = function(models) {
+    //   // We're saying that a user has one team
+    //   // A Post can't be created without an Author due to the foreign key constraint
+    //   PprPlayers.belongsTo(models.Teams, {
+    //     foreignKey: {
+    //       allowNull: true
+    //     }
+    //   });
+    // };
     return PprPlayers;
   }

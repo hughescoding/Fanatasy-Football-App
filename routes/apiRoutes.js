@@ -23,11 +23,11 @@ module.exports = function (app) {
   })
 
   // GET route for getting all of the todos
-  app.get("/api/pprPlayers", function (req, res) {
+  app.get("/api/standardPlayers", function (req, res) {
     // findAll returns all entries for a table when used with no options
-    db.PprPlayers.findAll({}).then(function (dbpprPlayers) {
+    db.StandardPlayers.findAll({}).then(function (dbstandardPlayers) {
       // We have access to the todos as an argument inside of the callback function
-      res.json(dbpprPlayers);
+      res.json(dbstandardPlayers);
     });
   });
 
