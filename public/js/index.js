@@ -7,6 +7,12 @@ var $signinUsername = $("#signin-username");
 var $signinPassword = $("#signin-password");
 var $signinEmail = $("#signin-email");
 var $signinTeam = $("#signin-team");
+
+// materialize "modal" initialization
+$(document).ready(function(){
+  $('.modal').modal();
+});
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {

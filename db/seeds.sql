@@ -2,6 +2,7 @@ USE gridiron_db;
 
 INSERT INTO `StandardPlayers` (`id`, `rank`, `player_name`, `nfl_team`, `position_rank`, `player_position`, `bye_week`, `draft_avg`, `drafted`, `createdAt`, `updatedAt`)
 VALUES
+
 	(1,1,'Todd Gurley','LAR','RB1','RB',12,1.4,0,'2018-12-28','2018-12-28'),
 	(2,2,'David Johnson','ARI','RB2','RB',9,2.8,0,'2018-12-28','2018-12-28'),
 	(3,3,'Ezekiel Elliott','DAL','RB3','RB',8,3.1,0,'2018-12-28','2018-12-28'),
@@ -432,3 +433,5 @@ VALUES
 	(428,428,'Eli Rogers','PIT ','WR143','WR',7,336.5,0,'2018-12-28','2018-12-28'),
 	(429,429,'Indianapolis','IND','DST32','DS',9,340.8,0,'2018-12-28','2018-12-28'),
 	(430,430,'Seth DeValve','CLE','TE59','TE',11,344.0,0,'2018-12-28','2018-12-28');
+
+

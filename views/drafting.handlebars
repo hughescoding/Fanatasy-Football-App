@@ -18,7 +18,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Drafting page</title>
 
-</head> --}}
+
+</head>
+<div class="wrapper">
+
+    <header>
+        <h1>Draft your Team</h1>
+    </header>
+
+    <section class="columns">
+
+        <div class="column">
+            <h2>Available Players</h2>
+            <div class="container-full">
+                <nav>
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+
+                                <input id="player-search" type="search" required>
+
+                                <label for="search"><i class="material-icons">search</i></label>
+                                <!-- I've put "red-text" class to emphasize -->
+                                <i class="material-icons red-text">close</i>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="filter">
+                    <option value="" disabled selected>Filter Player's by Position</option>
+                    <option value="qb">Quarter Backs</option>
+                    <option value="rb">Running Backs</option>
+                    <option value="wr">Wide Recievers</option>
+                    <option value="te">Tight Ends</option>
+                    <option value="ds">Defense</option>
+                    <option value="k">Kickers</option>
+                    <option value="null">Available Players</option>
+                    {{!-- <option value="2">Option 2</option>
+                    <option value="3">Option 3</option> --}}
+                </select>
+                <label>Position Filter</label>
+            </div>
+            {{!-- <a class='dropdown-button btn' href='#' data-activates='myDrodown'>Player Sorting Options</a>
+
+            <ul id='myDrodown' class='dropdown-content'>
+                <li><a href="#!">Full List</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Top 3 by Pos</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Quarterbacks</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Running Backs</a></li>
+                <li class="divider"></li>
+
+                <li onclick="createPlayerRow()"><a href="#!">Wide Receivers</a></li>
+
+                <li class="divider"></li>
+                <li><a href="#!">Tight Ends</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Kickers</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Defenses</a></li>
+                <li class="divider"></li>
+
+
+            </ul> --}}
+
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Position Rank</th>
+                        <th scope="col">Player Name</th>
+                        <th scope="col">Team Name</th>
+                        <th scope="col">Draft Avg</th>
+                        <th scope="col">Bye Week</th>
+                        <th scope="col">Draft/Drafted</th>
+                    </tr>
+                </thead>
+
+                <tbody id="a-players">
+
+
+                </tbody>
+            </table>
+
+
+
+
+        </div>
+
+        <div class="column">
+            <h2>Your Players</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Position Rank</th>
+                        <th scope="col">Player Name</th>
+                        <th scope="col">Team Name</th>
+                        <th scope="col">Bye Week</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+
+
+
+    </section>
+
+    <footer>
+        <h3>Footer</h3>
+
+        <br>
+        <a class="waves-effect waves-light btn">Draft Complete!</a>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, porro. Doloribus vitae non dolores modi
+            dolorum commodi perspiciatis dicta nostrum minus esse, totam officia, quibusdam amet quas tempora?
+            Voluptatibus, esse.</p>
+    </footer>
 
 <head>
     <!--Import Google Icon Font-->
@@ -100,6 +228,70 @@
                 <ul class="pagination pager" id="myPager"></ul>
 </div>
             </div>
+
+        </div>
+    </div>
+</div> 
+
+<div class="container-fluid availablePlayers">
+    <div class="row">
+        <div class="col-md-6">
+            <h4 style="text-align:center">Available Players</h4>
+        </div>
+        <div class="col-md-6">
+            <h4 style="text-align:center">User's Team</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Position Rank</th>
+                        <th scope="col">Player Name</th>
+                        <th scope="col">Team Name</th>
+                        <th scope="col">Draft Avg</th>
+                        <th scope="col">Bye Week</th>
+                        <th scope="col">Draft/Drafted</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline" style="align-content:center">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="search-player-2" class="sr-only">Player's Name</label>
+                    <input type="text" class="form-control" id="search-avail-player" placeholder="Player's Name">
+                </div>
+                <button type="submit" class="btn btn-success mb-2">Search for Player</button>
+
+                <div class="dropdown mb-2">
+                    <button class="btn btn-primary mx-sm-3 dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Player Type
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Top player from each position</a>
+                        <a class="dropdown-item" href="#">Suggested players to consider</a>
+                        <a class="dropdown-item" href="#">Overall Rankings</a>
+                        <a class="dropdown-item" href="#">Quarterback (QB)</a>
+                        <a class="dropdown-item" href="#">Running Back (RB)</a>
+                        <a class="dropdown-item" href="#">Wide Receiver (WR)</a>
+                        <a class="dropdown-item" href="#">Tight End (TE)</a>
+                        <a class="dropdown-item" href="#">Kicker (K)</a>
+                        <a class="dropdown-item" href="#">Defense (DEF)</a>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 style="text-align:center">Player List</h5>
+                </div>
 
 
             <div class="column">
