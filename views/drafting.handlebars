@@ -1,4 +1,3 @@
-{{!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,18 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified Materialize CSS -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Drafting page</title>
-
 
 </head>
 <div class="wrapper">
@@ -35,9 +32,7 @@
                     <div class="nav-wrapper">
                         <form>
                             <div class="input-field">
-
                                 <input id="player-search" type="search" required>
-
                                 <label for="search"><i class="material-icons">search</i></label>
                                 <!-- I've put "red-text" class to emphasize -->
                                 <i class="material-icons red-text">close</i>
@@ -46,7 +41,6 @@
                     </div>
                 </nav>
             </div>
-
             <div class="input-field col s12">
                 <select id="filter">
                     <option value="" disabled selected>Filter Player's by Position</option>
@@ -63,7 +57,6 @@
                 <label>Position Filter</label>
             </div>
             {{!-- <a class='dropdown-button btn' href='#' data-activates='myDrodown'>Player Sorting Options</a>
-
             <ul id='myDrodown' class='dropdown-content'>
                 <li><a href="#!">Full List</a></li>
                 <li class="divider"></li>
@@ -73,9 +66,7 @@
                 <li class="divider"></li>
                 <li><a href="#!">Running Backs</a></li>
                 <li class="divider"></li>
-
                 <li onclick="createPlayerRow()"><a href="#!">Wide Receivers</a></li>
-
                 <li class="divider"></li>
                 <li><a href="#!">Tight Ends</a></li>
                 <li class="divider"></li>
@@ -84,9 +75,7 @@
                 <li><a href="#!">Defenses</a></li>
                 <li class="divider"></li>
 
-
             </ul> --}}
-
 
             <table class="table">
                 <thead>
@@ -100,9 +89,7 @@
                         <th scope="col">Draft/Drafted</th>
                     </tr>
                 </thead>
-
                 <tbody id="a-players">
-
 
                 </tbody>
             </table>
@@ -139,207 +126,16 @@
 
     <footer>
         <h3>Footer</h3>
-
         <br>
         <a class="waves-effect waves-light btn">Draft Complete!</a>
-
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, porro. Doloribus vitae non dolores modi
             dolorum commodi perspiciatis dicta nostrum minus esse, totam officia, quibusdam amet quas tempora?
             Voluptatibus, esse.</p>
     </footer>
 
-<head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="/js/pagination.js"></script>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8">
-</head>
-<body>
-    <div class="wrapper">
-
-        <header>
-            <h1>Draft your Team</h1>
-        </header>
-
-        <section class="columns">
-
-            <div class="column">
-                <h2>Available Players</h2>
-                <div class="container-full">
-                    <nav>
-                        <div class="nav-wrapper">
-                            <form>
-                                <div class="input-field">
-                                    <input id="search" type="search" required>
-                                    <label for="search"><i class="material-icons">search</i></label>
-                                    <!-- I've put "red-text" class to emphasize -->
-                                    <i class="material-icons red-text">close</i>
-                                </div>
-                            </form>
-                        </div>
-                    </nav>
-                </div>
-                <a class='dropdown-button btn' href='#' data-activates='myDrodown'>Player Sorting Options</a>
-                <ul id='myDrodown' class='dropdown-content'>
-                    <li><a href="#!">Full List</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Top 3 by Pos</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Quarterbacks</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Running Backs</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Wide Receivers</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Tight Ends</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Kickers</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Defenses</a></li>
-                    <li class="divider"></li>
-
-                </ul>
-
-                <table class="table" id="myTable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Rank</th>
-                            <th scope="col">Position Rank</th>
-                            <th scope="col">Player Name</th>
-                            <th scope="col">Team Name</th>
-                            <th scope="col">Draft Avg</th>
-                            <th scope="col">Bye Week</th>
-                            <th scope="col">Draft/Drafted</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-
-                </table>
-                <div class="col-md-12 center text-center">
-                <span class="left" id="total_reg"></span>
-                <ul class="pagination pager" id="myPager"></ul>
 </div>
-            </div>
-
-        </div>
-    </div>
-</div> 
-
-<div class="container-fluid availablePlayers">
-    <div class="row">
-        <div class="col-md-6">
-            <h4 style="text-align:center">Available Players</h4>
-        </div>
-        <div class="col-md-6">
-            <h4 style="text-align:center">User's Team</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Rank</th>
-                        <th scope="col">Position Rank</th>
-                        <th scope="col">Player Name</th>
-                        <th scope="col">Team Name</th>
-                        <th scope="col">Draft Avg</th>
-                        <th scope="col">Bye Week</th>
-                        <th scope="col">Draft/Drafted</th>
-                    </tr>
-                </thead>
-                <tbody>
 
 
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-6">
-            <form class="form-inline" style="align-content:center">
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="search-player-2" class="sr-only">Player's Name</label>
-                    <input type="text" class="form-control" id="search-avail-player" placeholder="Player's Name">
-                </div>
-                <button type="submit" class="btn btn-success mb-2">Search for Player</button>
-
-                <div class="dropdown mb-2">
-                    <button class="btn btn-primary mx-sm-3 dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Player Type
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Top player from each position</a>
-                        <a class="dropdown-item" href="#">Suggested players to consider</a>
-                        <a class="dropdown-item" href="#">Overall Rankings</a>
-                        <a class="dropdown-item" href="#">Quarterback (QB)</a>
-                        <a class="dropdown-item" href="#">Running Back (RB)</a>
-                        <a class="dropdown-item" href="#">Wide Receiver (WR)</a>
-                        <a class="dropdown-item" href="#">Tight End (TE)</a>
-                        <a class="dropdown-item" href="#">Kicker (K)</a>
-                        <a class="dropdown-item" href="#">Defense (DEF)</a>
-                    </div>
-                </div>
-            </form>
-            <br>
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 style="text-align:center">Player List</h5>
-                </div>
-
-
-            <div class="column">
-                <h2>Your Players</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Rank</th>
-                            <th scope="col">Position Rank</th>
-                            <th scope="col">Player Name</th>
-                            <th scope="col">Team Name</th>
-                            <th scope="col">Bye Week</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-
-            </div>
-
-            <script type="text/javascript">
-
-                //Pagination//
-                
-                $('#myTable').pageMe({
-                    pagerSelector: '#myPager',
-                    activeColor: 'blue',
-                    perPage: 100,
-                    showPrevNext: false,
-                    nextText: '',
-                    prevText: '',
-                    hidePageNumbers: false
-                });
-            </script>
-
-        </section>
-
-        <footer>
-            <h3>Footer</h3>
-            <br>
-            <a class="waves-effect waves-light btn">Draft Complete!</a>
-            <p>When you have finished drafting, click the Draft Complete! button and head to your lockeroom.</p>
-        </footer>
-
-    </div>
-</body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/pagination.js"></script>
 <script src="/js/drafting.js"></script>
