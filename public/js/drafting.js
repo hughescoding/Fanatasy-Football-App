@@ -95,6 +95,7 @@ $(document).ready(function () {
         players.push(data[i]);
         }
       }
+
       // calls function that creates the players rows in the div
       // pass in null filter to display all undrafted players
       createPlayerRow(null);
@@ -123,7 +124,6 @@ $(document).ready(function () {
   //   alertDiv.text("You must create an Author before you can create a Post.");
   //   playerContainer.append(alertDiv);
   // }
-
 
 });
 

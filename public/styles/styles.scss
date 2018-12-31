@@ -1,175 +1,129 @@
-$images: (
-    top: url(/images/football-stadium-200986.jpg),
-    middle: url(/images/fans-view-1846039_1920.jpg),
-    bottom: url(/images/loocker-pic.jpg),
-    starters: url(../images/crossword.png),
-    activePlayers: url(../images/nice_snow.png)
 
-);
+/* Michael CSS */
 
-$padding: (
-    parallax-top: 300px 0,
-    parallax-middle: 500px 0,
-    parallax-bottom: 450px 0,
-);
-
-@function Ppadding($padding-parallax) {
-    @return map-get($padding, $padding-parallax)
-};
-
-@function parallaxImage($img-pos) {
-    @return map-get($images, $img-pos)
-};
-
-$jumbotron: (
-    color: #FFF
-);
-
-.title {
-    background-image: parallaxImage(top);
-    background-size: cover;
-    background-position: center;
-    padding: Ppadding(parallax-top);
-    color: #FFF
-
+.parallax-container {
+  height: 600px;
+  /* border: solid black 1px; */
 }
 
-.fans {
-    background-image: parallaxImage(middle);
-    background-size: cover;
-    background-position: center;
-    padding: Ppadding(parallax-middle);
-    color: #FFF
+.parallax-text {
+height: 250px;
+/*background-color: #eceff1;*/
+text-align: center;
 }
 
-.about {
-    text-align: center;
-    background-color: rgb(98, 203, 252);
+.logo1 {
+  background-image: url(/images/logo-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
 }
-
+.turfpaint {
+  height: 250px;
+  background-image: url(/images/turf-lines.jpg);
+  background-size: center;
+  background-position: center;
+}
+.turfpaint1 {
+  height: 100px;
+  background-image: url(/images/turf-lines.jpg);
+  background-size: center;
+  background-position: center;
+}
+.turf {
+  background-image: url(/images/grass.png);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.promo-row {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: black;
+}
+.promotext {
   
-.locker {
-    background-image: url(/images/loocker-pic.jpg);
-    background-size: cover;
-    background-position: bottom;
-    padding: 450px 0;
-    color: #FFF;
+  color: #ffcc00;
+  font-size: 24px;
+  font-weight: bold;
 }
-  
-.availablePlayers {
-    background-image: url(../images/nice_snow.png);
-    // width: 40%;
-    // float: left;
-    // height: 700px;
-    // margin: 50px;
-}
-  
-.starters {
-    background-image: url(../images/nice_snow.png);
-    width: 40%;
-    float: left;
-    height: 700px;
-    margin: 50px;
-  
-}
-  
-.bench {
-    background-image: url(../images/nice_snow.png);
-    width: 40%;
-    float: left;
-    height: 250px;
-    margin: 50px;
+.material-icons {
+  border-radius: 10px;
 }
 
-.locker {
-    background-image: parallaxImage(bottom);
-    background-size: cover;
-    background-position: bottom;
-    padding: Ppadding(parallax-bottom);
-    color: #FFF
-
+.cardreg {
+  border-radius: 10px;
+  margin-top: 180px;
+  text-align: center
+}
+.promo-text {
+  color: black;
+}
+.copyright {
+  color: #ffcc00;
+}
+body {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
 }
 
-#menu {
-    position: relative;
-    left: 190px;
-    display: inline-block;
-  
-}
-  
-#menu li {
-    font-weight: bold;
-    display: inline;
-    text-transform: uppercase;
-    margin-right: 8px;
-}
-  
-#benchMenu {
-    position: relative;
-    left: 90px;
-    display: inline-block;
-}
-  
-#benchMenu li {
-    font-weight: bold;
-    display: inline;
-    text-transform: uppercase;
-    margin-right: 8px;
-}
-  
-.footer{
-    background-image: url();
-    background-size: cover;
-    color: black;
-    padding: 20px;
-    text-align: center;
-}
-  
-.jumbotron-billboard .img {
-    margin-bottom: 0px;
-    color: white;
-    background: #000 url("../images/nfl_logo.jpeg") top center no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
-    overflow: hidden;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-    border-bottom:2.5px solid red;
-}
-.jumbotron h2 {margin-top:0;}
-
-.jumbotron {
-  position:relative;
-  padding-top:100px;
-  padding-bottom:100px;
+p {
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.jumbotron .container {
-  position:relative;
-  z-index:2;
-}
-  
-@media screen and (max-width: 768px) {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
- .jumbotron {
-    padding-top:20px;
-    padding-bottom:20px;
- }
+* { box-sizing: border-box; }
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
 }
-  
+
+/* STRUCTURE */
+
+.wrapper {
+	padding: 5px;
+	max-width: 1489px;
+	width: 95%;
+	margin: 20px auto;
+}
+header {
+	padding: 0 15px;
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+
 .column {
-    float: left;
-    width: 25%;
-    padding: 5px;
-}
-  
-  
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+	flex: 1;
+	border: 1px solid gray;
+	margin: 2px;
+	padding: 10px;
+
 }
 
+footer {
+	padding: 0 15px;
+}
+
+
+@media screen and (max-width: 1509px) {
+  .columns .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+}

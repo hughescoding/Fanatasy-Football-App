@@ -1,143 +1,4 @@
-.title {
-  background-image: url(/images/football-stadium-200986.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 300px 0;
-  color: #FFF;
-}
 
-.fans {
-  background-image: url(/images/fans-view-1846039_1920.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 500px 0;
-  color: #FFF;
-}
-
-.about {
-  text-align: center;
-  background-color: #62cbfc;
-}
-
-.locker {
-  background-image: url(/images/loocker-pic.jpg);
-  background-size: cover;
-  background-position: bottom;
-  padding: 450px 0;
-  color: #FFF;
-}
-
-.availablePlayers {
-  background-image: url(../images/nice_snow.png);
-}
-
-.starters {
-  background-image: url(../images/nice_snow.png);
-  width: 40%;
-  float: left;
-  height: 700px;
-  margin: 50px;
-}
-
-.bench {
-  background-image: url(../images/nice_snow.png);
-  width: 40%;
-  float: left;
-  height: 250px;
-  margin: 50px;
-}
-
-.locker {
-  background-image: url(/images/loocker-pic.jpg);
-  background-size: cover;
-  background-position: bottom;
-  padding: 450px 0;
-  color: #FFF;
-}
-
-#menu {
-  position: relative;
-  left: 190px;
-  display: inline-block;
-}
-
-#menu li {
-  font-weight: bold;
-  display: inline;
-  text-transform: uppercase;
-  margin-right: 8px;
-}
-
-#benchMenu {
-  position: relative;
-  left: 90px;
-  display: inline-block;
-}
-
-#benchMenu li {
-  font-weight: bold;
-  display: inline;
-  text-transform: uppercase;
-  margin-right: 8px;
-}
-
-.footer {
-  background-image: url();
-  background-size: cover;
-  color: black;
-  padding: 20px;
-  text-align: center;
-}
-
-.jumbotron-billboard .img {
-  margin-bottom: 0px;
-  color: white;
-  background: #000 url("../images/nfl_logo.jpeg") top center no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  border-bottom: 2.5px solid red;
-}
-
-.jumbotron h2 {
-  margin-top: 0;
-}
-
-.jumbotron {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.jumbotron .container {
-  position: relative;
-  z-index: 2;
-}
-
-@media screen and (max-width: 768px) {
-  .jumbotron {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}
-
-.column {
-  float: left;
-  width: 25%;
-  padding: 5px;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-/*# sourceMappingURL=styles.css.map */
 
 /* Michael CSS */
 
@@ -151,7 +12,12 @@ height: 250px;
 /*background-color: #eceff1;*/
 text-align: center;
 }
-
+body {
+  background-image: url(/images/ontheclock.jpg);
+}
+.wrapper {
+  background-color: white
+}
 .logo1 {
   background-image: url(/images/logo-banner.jpg);
   background-size: cover;
@@ -245,9 +111,7 @@ header {
 	border: 1px solid gray;
 	margin: 2px;
 	padding: 10px;
-	&:first-child { margin-left: 0; }
-	&:last-child { margin-right: 0; }
-	
+
 }
 
 footer {
@@ -259,13 +123,7 @@ footer {
   .columns .column {
 		margin-bottom: 5px;
     flex-basis: 40%;
-		&:nth-last-child(2) {
-			margin-right: 0;
-		}
-		&:last-child {
-			flex-basis: 100%;
-			margin: 0;
-		}
+		
 	}
 }
 
