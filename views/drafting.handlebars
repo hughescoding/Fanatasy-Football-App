@@ -32,7 +32,9 @@
                     <div class="nav-wrapper">
                         <form>
                             <div class="input-field">
-                                <input id="search" type="search" required>
+
+                                <input id="player-search" type="search" required>
+
                                 <label for="search"><i class="material-icons">search</i></label>
                                 <!-- I've put "red-text" class to emphasize -->
                                 <i class="material-icons red-text">close</i>
@@ -41,7 +43,24 @@
                     </div>
                 </nav>
             </div>
-            <a class='dropdown-button btn' href='#' data-activates='myDrodown'>Player Sorting Options</a>
+
+            <div class="input-field col s12">
+                <select id="filter">
+                    <option value="" disabled selected>Filter Player's by Position</option>
+                    <option value="qb">Quarter Backs</option>
+                    <option value="rb">Running Backs</option>
+                    <option value="wr">Wide Recievers</option>
+                    <option value="te">Tight Ends</option>
+                    <option value="ds">Defense</option>
+                    <option value="k">Kickers</option>
+                    <option value="null">Available Players</option>
+                    {{!-- <option value="2">Option 2</option>
+                    <option value="3">Option 3</option> --}}
+                </select>
+                <label>Position Filter</label>
+            </div>
+            {{!-- <a class='dropdown-button btn' href='#' data-activates='myDrodown'>Player Sorting Options</a>
+
             <ul id='myDrodown' class='dropdown-content'>
                 <li><a href="#!">Full List</a></li>
                 <li class="divider"></li>
@@ -51,7 +70,9 @@
                 <li class="divider"></li>
                 <li><a href="#!">Running Backs</a></li>
                 <li class="divider"></li>
-                <li><a href="#!">Wide Receivers</a></li>
+
+                <li onclick="createPlayerRow()"><a href="#!">Wide Receivers</a></li>
+
                 <li class="divider"></li>
                 <li><a href="#!">Tight Ends</a></li>
                 <li class="divider"></li>
@@ -60,7 +81,9 @@
                 <li><a href="#!">Defenses</a></li>
                 <li class="divider"></li>
 
-            </ul>
+
+            </ul> --}}
+
 
             <table class="table">
                 <thead>
@@ -74,7 +97,9 @@
                         <th scope="col">Draft/Drafted</th>
                     </tr>
                 </thead>
-                <tbody>
+
+                <tbody id="a-players">
+
 
                 </tbody>
             </table>
@@ -111,8 +136,10 @@
 
     <footer>
         <h3>Footer</h3>
+
         <br>
         <a class="waves-effect waves-light btn">Draft Complete!</a>
+
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, porro. Doloribus vitae non dolores modi
             dolorum commodi perspiciatis dicta nostrum minus esse, totam officia, quibusdam amet quas tempora?
             Voluptatibus, esse.</p>
