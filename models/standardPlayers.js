@@ -29,9 +29,11 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.BOOLEAN,
           default: false,
       },
-      user_id: {
-          type: DataTypes.INTEGER,
-      },
+      timestamps: {
+        type: DataTypes.BOOLEAN,
+        default: false,
+      }
+    
       
     
       
