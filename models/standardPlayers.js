@@ -25,14 +25,7 @@ module.exports = function(sequelize, DataTypes) {
       draft_avg: {
           type: DataTypes.DECIMAL(4,1),
       },
-      drafted: {
-          type: DataTypes.BOOLEAN,
-          default: false,
-      },
-      timestamps: {
-        type: DataTypes.BOOLEAN,
-        default: false,
-      }
+
     
       
     
@@ -40,14 +33,6 @@ module.exports = function(sequelize, DataTypes) {
   
     });
 
-    // StandardPlayers.associate = function(models) {
-    //     // We're saying that a user has one team
-    //     // A Post can't be created without an Author due to the foreign key constraint
-    //     StandardPlayers.belongsTo(models.teams, {
-    //       foreignKey: {
-    //         allowNull: false
-    //       }
-    //     });
-    //   };
+
     return StandardPlayers;
   }
