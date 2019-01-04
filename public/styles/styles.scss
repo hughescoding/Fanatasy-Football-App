@@ -1,5 +1,22 @@
-
 /* Michael CSS */
+
+#filter {
+  color: black;
+}
+
+td {
+  border:1px solid black; 
+}
+
+.draftbutton {
+  border:1px solid black; 
+  text-align: center
+}
+
+#a-players {
+  text-align: center;
+  align-items: center;
+}
 
 .parallax-container {
   height: 600px;
@@ -12,41 +29,75 @@ height: 250px;
 text-align: center;
 }
 
+header {
+  background-image: url(/images/grass.png);
+  align-items: center;
+  text-align: center;
+  color: #ffcc00;
+}
+
+body {
+  background-image: url(/images/pigskin6.jpg);
+  background-color: black;
+  /*background-image: url(/images/ontheclock.jpg);*/
+}
+
+footer {
+  align-items: center;
+  text-align: center;
+  background-color: black;
+}
+
+.wrapper {
+  background-color: black;
+  font-display: white;
+}
+
+.column {
+
+  background-color: antiquewhite;
+}
+
 .logo1 {
   background-image: url(/images/logo-banner.jpg);
   background-size: cover;
   background-position: center;
   height: 600px;
 }
+
 .turfpaint {
   height: 250px;
   background-image: url(/images/turf-lines.jpg);
   background-size: center;
   background-position: center;
 }
+
 .turfpaint1 {
   height: 100px;
   background-image: url(/images/turf-lines.jpg);
   background-size: center;
   background-position: center;
 }
+
 .turf {
   background-image: url(/images/grass.png);
   background-size: cover;
   background-position: center;
   height: 600px;
 }
+
 .promo-row {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: black;
 }
+
 .promotext {
-  
   color: #ffcc00;
   font-size: 24px;
   font-weight: bold;
 }
+
 .material-icons {
   border-radius: 10px;
 }
@@ -56,12 +107,15 @@ text-align: center;
   margin-top: 180px;
   text-align: center
 }
+
 .promo-text {
   color: black;
 }
+
 .copyright {
   color: #ffcc00;
 }
+
 body {
   font-family: 'Source Code Pro', monospace;
   font-size: 20px;
@@ -80,14 +134,27 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #666;
 }
-
-/* STRUCTURE */
-
-.wrapper {
+/*locker Room*/
+.locker-wrapper {
 	padding: 5px;
-	max-width: 1489px;
+	max-width: 1540px;
 	width: 95%;
-	margin: 20px auto;
+	margin: 10px auto;
+}
+
+draft-body {
+  background-image: url(/images/loocker-pic.jpg);
+  background-color: black;
+  /*background-image: url(/images/ontheclock.jpg);*/
+}
+
+/* Draft Page Structure */
+
+.draft-wrapper {
+	padding: 5px;
+	max-width: 1540px;
+	width: 95%;
+	margin: 10px auto;
 }
 header {
 	padding: 0 15px;
@@ -95,16 +162,18 @@ header {
 
 .columns {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+	flex-flow: row wrap; 
+  justify-content: center;
+  justify-items: center;
 	margin: 5px 0;
 }
 
 .column {
-	flex: 1;
+	flex: 10;
 	border: 1px solid gray;
 	margin: 2px;
-	padding: 10px;
+  padding: 10px;
+  
 
 }
 

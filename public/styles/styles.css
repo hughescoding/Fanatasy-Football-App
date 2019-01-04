@@ -1,6 +1,24 @@
-
-
 /* Michael CSS */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#filter {
+  color: black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.draftbutton {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#a-players {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .parallax-container {
   height: 600px;
@@ -8,51 +26,83 @@
 }
 
 .parallax-text {
-height: 250px;
-/*background-color: #eceff1;*/
-text-align: center;
+  height: 250px;
+  /*background-color: #eceff1;*/
+  text-align: center;
 }
+
+header {
+  background-image: url(/images/grass.png);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #ffcc00;
+}
+
 body {
-  background-image: url(/images/ontheclock.jpg);
+  background-image: url(/images/pigskin6.jpg);
+  background-color: black;
+  /*background-image: url(/images/ontheclock.jpg);*/
 }
+
+footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: black;
+}
+
 .wrapper {
-  background-color: white
+  background-color: black;
+  font-display: white;
 }
+
+.column {
+  background-color: antiquewhite;
+}
+
 .logo1 {
   background-image: url(/images/logo-banner.jpg);
   background-size: cover;
   background-position: center;
   height: 600px;
 }
+
 .turfpaint {
   height: 250px;
   background-image: url(/images/turf-lines.jpg);
   background-size: center;
   background-position: center;
 }
+
 .turfpaint1 {
   height: 100px;
   background-image: url(/images/turf-lines.jpg);
   background-size: center;
   background-position: center;
 }
+
 .turf {
   background-image: url(/images/grass.png);
   background-size: cover;
   background-position: center;
   height: 600px;
 }
+
 .promo-row {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: black;
 }
+
 .promotext {
-  
   color: #ffcc00;
   font-size: 24px;
   font-weight: bold;
 }
+
 .material-icons {
   border-radius: 10px;
 }
@@ -60,14 +110,17 @@ body {
 .cardreg {
   border-radius: 10px;
   margin-top: 180px;
-  text-align: center
+  text-align: center;
 }
+
 .promo-text {
   color: black;
 }
+
 .copyright {
   color: #ffcc00;
 }
+
 body {
   font-family: 'Source Code Pro', monospace;
   font-size: 20px;
@@ -78,58 +131,83 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-* { box-sizing: border-box; }
-
-body { 
+body {
   font-family: 'Open Sans', sans-serif;
   color: #666;
 }
 
-/* STRUCTURE */
-
-.wrapper {
-	padding: 5px;
-	max-width: 1489px;
-	width: 95%;
-	margin: 20px auto;
+/*locker Room*/
+.locker-wrapper {
+  padding: 5px;
+  max-width: 1540px;
+  width: 95%;
+  margin: 10px auto;
 }
+
+draft-body {
+  background-image: url(/images/loocker-pic.jpg);
+  background-color: black;
+  /*background-image: url(/images/ontheclock.jpg);*/
+}
+
+/* Draft Page Structure */
+.draft-wrapper {
+  padding: 5px;
+  max-width: 1540px;
+  width: 95%;
+  margin: 10px auto;
+}
+
 header {
-	padding: 0 15px;
+  padding: 0 15px;
 }
 
 .columns {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	margin: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  margin: 5px 0;
 }
 
 .column {
-	flex: 1;
-	border: 1px solid gray;
-	margin: 2px;
-	padding: 10px;
-
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  border: 1px solid gray;
+  margin: 2px;
+  padding: 10px;
 }
 
 footer {
-	padding: 0 15px;
+  padding: 0 15px;
 }
-
 
 @media screen and (max-width: 1509px) {
   .columns .column {
-		margin-bottom: 5px;
-    flex-basis: 40%;
-		
-	}
+    margin-bottom: 5px;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
 }
 
 @media screen and (max-width: 680px) {
-	.columns .column {
-		flex-basis: 100%;
-		margin: 0 0 5px 0;
-	}
+  .columns .column {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
 }
+/*# sourceMappingURL=styles.css.map */
