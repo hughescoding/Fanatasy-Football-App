@@ -1,28 +1,35 @@
+/*Getting Sassy*/
+
+$colors:  (
+  div-main: black,
+  div-sec: antiquewhite,
+  main-text: #ffcc00,
+  sec-text: gray,
+  more-text: black
+)
+
+$imagebackgrounds: (
+  
+)
+
 /* Michael CSS */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 #filter {
   color: black;
 }
-h1{
-  
-}
-.btn {
-  border-radius: 10px;
-}
+
 td {
-  border: 1px solid black;
+  border:1px solid black; 
 }
 
 .draftbutton {
-  border: 1px solid black;
-  text-align: center;
+  border:1px solid black; 
+  text-align: center
 }
 
 #a-players {
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .parallax-container {
@@ -31,19 +38,16 @@ td {
 }
 
 .parallax-text {
-  height: 250px;
-  /*background-color: #eceff1;*/
-  text-align: center;
+height: 250px;
+/*background-color: #eceff1;*/
+text-align: center;
 }
 
 header {
   background-image: url(/images/grass.png);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #ffcc00;
-  border-radius: 10px;
 }
 
 body {
@@ -53,12 +57,8 @@ body {
 }
 
 footer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
-  background-color: black;
-  border-radius: 10px;
 }
 
 .wrapper {
@@ -67,8 +67,8 @@ footer {
 }
 
 .column {
+
   background-color: antiquewhite;
-  border-radius: 10px;
 }
 
 .logo1 {
@@ -118,7 +118,7 @@ footer {
 .cardreg {
   border-radius: 10px;
   margin-top: 180px;
-  text-align: center;
+  text-align: center
 }
 
 .promo-text {
@@ -139,79 +139,59 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body {
+* { box-sizing: border-box; }
+
+body { 
   font-family: 'Open Sans', sans-serif;
   color: #666;
 }
 
-/*locker Room*/
-.locker-wrapper {
-  padding: 5px;
-  max-width: 1540px;
-  width: 95%;
-  margin: 10px auto;
-}
-
-
-
 /* Draft Page Structure */
-.draft-wrapper {
-  padding: 5px;
-  max-width: 1540px;
-  width: 95%;
-  margin: 10px auto;
-}
 
+.draft-wrapper {
+	padding: 5px;
+	max-width: 1540px;
+	width: 95%;
+	margin: 10px auto;
+}
 header {
-  padding: 0 15px;
+	padding: 0 15px;
 }
 
 .columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+	display: flex;
+	flex-flow: row wrap; 
+  justify-content: center;
   justify-items: center;
-  margin: 5px 0;
+	margin: 5px 0;
 }
 
 .column {
-  -webkit-box-flex: 10;
-      -ms-flex: 10;
-          flex: 10;
-  border: 1px solid gray;
-  margin: 2px;
-  padding: 10px;
+	flex: 10;
+	border: 1px solid gray;
+	margin: 2px;
+	padding: 10px;
+
 }
 
 footer {
-  padding: 0 15px;
+	padding: 0 15px;
 }
+
 
 @media screen and (max-width: 1509px) {
   .columns .column {
-    margin-bottom: 5px;
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
-  }
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		
+	}
 }
 
 @media screen and (max-width: 680px) {
-  .columns .column {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin: 0 0 5px 0;
-  }
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
 }
-/*# sourceMappingURL=styles.css.map */

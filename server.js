@@ -5,9 +5,11 @@ var exphbs = require("express-handlebars");
 
 var db = require("./models");
 
+// const NewsAPI = require("newsapi");
+// const newsapi = new NewsAPI("d81fe369bb314647a9d2391f6765100f");
+
 var app = express();
 var PORT = process.env.PORT || 3000;
-
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
