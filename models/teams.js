@@ -19,7 +19,8 @@ module.exports = function(sequelize, DataTypes) {
 
       Teams.hasMany(models.StandardPlayers, {
         foreignKey: {
-          allowNull: true
+          allowNull: true,
+          default: null
         }
       });
     }

@@ -45,7 +45,9 @@ $(document).ready(function () {
 
     players = _.filter(players, function (player) {
       return player.id !== parseInt(playerId);
+      
     });
+    // console.log(players);
 
   };
 
@@ -124,7 +126,7 @@ $(document).ready(function () {
       html += "<td><a class= 'waves-effect waves-light green btn-small material-icons right draft-btn'>";
       html += "<i class='small material-icons'>cancel</i></a></td>";
 
-      // create the draft button
+      // create the drafted button
       html += "<td><a class= 'waves-effect waves-light red btn-small material-icons right drafted-btn'>";
       html += "<i class='small material-icons'>check_circle</i></a></td>";
 
@@ -172,30 +174,34 @@ $(document).ready(function () {
       players = _.filter(data, function (player) { return player.TeamId === null });
 
       createPlayerRow(null);
-
+      // console.log(data);
 
     });
   }
 
   function updateTeamId(draftedPlayers) {
 
-    console.log(draftedPlayers);
+    // console.log(draftedPlayers);
 
     _.each(draftedPlayers, function (draftedPlayer) {
 
     draftedPlayer.TeamId = 1;
-    TeamIdChanged++;
+    // TeamIdChanged++;
+    
       
-console.log('You are making an API call to update player Id ' + draftedPlayer.id);
+console.log('You are making an API call to update p layer Id ' + draftedPlayer.id);
       $.ajax({
         method: "PUT",
         url: "/api/standardPlayers",
         data: draftedPlayer,
       }).then(function() {
-        if (numberClicked === TeamIdChanged){
+        TeamIdChanged++;
+        console.log(TeamIdChanged);
+        if (TeamIdChanged === numberClicked){
           window.location.href = "/locker"
+          // console.log(TeamIdChanged === numberClicked)
         }
-        console.log("complete")
+        // console.log("not complete yet ony " + TeamIdChanged)
       });
 
     })
