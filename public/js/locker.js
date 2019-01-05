@@ -1,17 +1,26 @@
 $(document).ready(function () {
 
-  var players = [];
-  var news = [];
-  var cacheFilter;
+    var players = [];
+    var undraftedPlayers = [];
+    var news = [];
+    var cacheFilter;
+    var undraftedPlayer;
 
-  console.log("You're connected");
-  $('#filter').formSelect();
-  $("#filter").on('change', function () {
-    createPlayerRow($(this).val());
-  });
+    // console.log("YOure connected");
+    $('#filter').formSelect();
+    $("#filter").on('change', function () {
+      createPlayerRow($(this).val());
+    });
 
-  // call start function
-  getPlayers();
+    $('body').on('click', '.undraft-btn', function () {
+
+        removePlayer($(this));
+        createPlayerRow(cacheFilter);
+    
+      });
+
+    // call start function
+    getPlayers();
 
   function createPlayerRow(filterType) {
 
@@ -62,7 +71,11 @@ $(document).ready(function () {
       html += "<td> " + playerData.nfl_team + "</td>";
       html += "<td> " + playerData.draft_avg + "</td>";
       html += "<td> " + playerData.bye_week + "</td>";
-      html += "</tr>";
+
+      // create the undrafted button
+    //   html += "<td><a class= 'waves-effect waves-light red btn-small material-icons right undraft-btn'>";
+    //   html += "<i class='small material-icons'>cancel</i></a></td>";
+    //   html += "</tr>";
       newTr.append(html);
     }
   }
@@ -113,5 +126,45 @@ $(document).ready(function () {
     });
 
   });
+
+//   function removePlayer(clickedBtn) {
+       
+//     var playerId = clickedBtn.closest('tr').attr('id');
+
+//     undraftedPlayer = players[playerId] 
+
+//     undraftedPlayer.TeamId = "null";
+
+//     undraftedPlayers.push(undraftedPlayer) 
+
+//     updateTeamId(undraftedPlayer);
+
+    
+
+
+
+    // console.log("changed the TeamId to " + players[playerId].TeamId)
+
+   
+        // console.log("not complete yet ony " + TeamIdChanged)
+      
+    // players = _.filter(players, function (player) {
+    //   return player.id !== parseInt(playerId);
+      
+    // }
+
+    // function updateTeamId (undraftedPlayers) {
+    //     $.ajax({
+    //         method: "PUT",
+    //         url: "/api/standardPlayers",
+    //         data: undraftedPlayers,
+    //       }).then(function() {
+
+    //         console.log(undraftedPlayer)
+    //           // console.log(TeamIdChanged === numberClicked)
+    //         })
+
+    // } 
+  
 
 });

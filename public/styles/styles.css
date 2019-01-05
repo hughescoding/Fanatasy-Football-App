@@ -3,12 +3,7 @@
 #filter {
   color: black;
 }
-h1{
-  
-}
-.btn {
-  border-radius: 10px;
-}
+
 td {
   border: 1px solid black;
 }
@@ -43,7 +38,6 @@ header {
           align-items: center;
   text-align: center;
   color: #ffcc00;
-  border-radius: 10px;
 }
 
 body {
@@ -58,7 +52,6 @@ footer {
           align-items: center;
   text-align: center;
   background-color: black;
-  border-radius: 10px;
 }
 
 .wrapper {
@@ -68,7 +61,6 @@ footer {
 
 .column {
   background-color: antiquewhite;
-  border-radius: 10px;
 }
 
 .logo1 {
@@ -157,7 +149,11 @@ body {
   margin: 10px auto;
 }
 
-
+draft-body {
+  background-image: url(/images/loocker-pic.jpg);
+  background-color: black;
+  /*background-image: url(/images/ontheclock.jpg);*/
+}
 
 /* Draft Page Structure */
 .draft-wrapper {
