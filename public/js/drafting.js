@@ -28,6 +28,7 @@ $(document).ready(function () {
     removePlayer($(this));
 
     createPlayerRow(cacheFilter);
+    console.log("clicked")
 
 
   });
@@ -51,15 +52,15 @@ $(document).ready(function () {
 
   };
 
-
   function addPlayer(clickedBtn) {
 
     var playerId = clickedBtn.closest('tr').attr('id');
 
-    draftedPlayers.push(_.filter(players, function (player) { return player.id === parseInt(playerId) })[0]);
+    draftedPlayers.push(_.filter(players, function (player) {
+      return player.id === parseInt(playerId)
+    })[0]);
     numberClicked++
     console.log(numberClicked);
-
 
     createDraftedPlayerRow();
 
@@ -68,9 +69,7 @@ $(document).ready(function () {
   // call function to populate the players
   getPlayers();
 
-
-  // create function that places all players into rows/comlumns with the correct info
-
+  // create function that places all players into rows/comlumns with the correct infoå
   function createPlayerRow(filterType) {
     cacheFilter = filterType;
     // empties the div each time so the player list doesn't duplicate
@@ -85,23 +84,18 @@ $(document).ready(function () {
         if (filterType.toLowerCase() === 'wr' && (!playerData.player_position || playerData.player_position.toLowerCase() !== 'wr')) {
           continue;
         }
-
         if (filterType.toLowerCase() === 'qb' && (!playerData.player_position || playerData.player_position.toLowerCase() !== 'qb')) {
           continue;
         }
-
         if (filterType.toLowerCase() === 'rb' && (!playerData.player_position || playerData.player_position.toLowerCase() !== 'rb')) {
           continue;
         }
-
         if (filterType.toLowerCase() === 'te' && (!playerData.player_position || playerData.player_position.toLowerCase() !== 'te')) {
           continue;
         }
-
         if (filterType.toLowerCase() === 'ds' && (!playerData.player_position || playerData.player_position.toLowerCase() !== 'ds')) {
           continue;
         }
-
         if (filterType.toLowerCase() === 'k' && (!playerData.player_position || playerData.player_position.toLowerCase() !== 'k')) {
           continue;
         }
@@ -121,7 +115,6 @@ $(document).ready(function () {
       html += "<td> " + playerData.draft_avg + "</td>";
       html += "<td> " + playerData.bye_week + "</td>";
 
-
       // create the draft button
       html += "<td><a class= 'waves-effect waves-light green btn-small material-icons right draft-btn'>";
       html += "<i class='small material-icons'>cancel</i></a></td>";
@@ -130,25 +123,20 @@ $(document).ready(function () {
       html += "<td><a class= 'waves-effect waves-light red btn-small material-icons right drafted-btn'>";
       html += "<i class='small material-icons'>check_circle</i></a></td>";
 
-      // create info button
+      // create info button - for future development, will call detailed stats from another api
       // html += "<td><a class= 'waves-effect waves-light blue btn-small material-icons right drafted-btn'>";
       // html += "<i class='small material-icons'>info</i></a></td>";
 
-
-      // newTr.append(draftButton, draftedButton);
       html += "</tr>";
       newTr.append(html);
     }
 
-
-
   }
 
-  function createDraftedPlayerRow () {
+  function createDraftedPlayerRow() {
     $("#d-players").empty();
-  
+
     for (var i = 0; i < draftedPlayers.length; i++) {
-      // _.each(draftedPlayers, function () {
 
       var playerData = draftedPlayers[i];
 
@@ -161,7 +149,6 @@ $(document).ready(function () {
       html += "<td> " + playerData.player_name + "</td>";
       html += "<td> " + playerData.nfl_team + "</td>";
       html += "<td> " + playerData.bye_week + "</td>";
-
       html += "</tr>";
       newTr.append(html);
     }
@@ -170,11 +157,12 @@ $(document).ready(function () {
   // create function the gets the players
   function getPlayers() {
     $.get("/api/standardPlayers", function (data) {
-
-      players = _.filter(data, function (player) { return player.TeamId === null });
+      console.log("get");
+      players = _.filter(data, function (player) {
+        return player.TeamId === null 
+      });
 
       createPlayerRow(null);
-      // console.log(data);
 
     });
   }
@@ -207,6 +195,4 @@ console.log('You are making an API call to update p layer Id ' + draftedPlayer.i
     })
   }
 
-
 });
-

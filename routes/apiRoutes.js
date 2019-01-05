@@ -25,9 +25,10 @@ module.exports = function (app) {
   // GET route for getting all of the standardPlayers
   app.get("/api/standardPlayers", function (req, res) {
 
-    console.log('get');
+    
     // findAll returns all entries for a table when used with no options
     db.StandardPlayers.findAll({}).then(function (dbstandardPlayers) {
+     
       // We have access to the todos as an argument inside of the callback function
       res.json(dbstandardPlayers);
     });
